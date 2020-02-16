@@ -104,7 +104,7 @@ namespace BerekenInhouden.Wpf
             int hoogte;
             double diameter;
             hoogte = int.Parse(txtHoogte.Text);
-            diameter = float.Parse(txtDiameter.Text);
+            diameter = double.Parse(txtDiameter.Text);
 
             float inhoudCilinder = GeefInhoudCilinder(hoogte, diameter);
             tbkBerekeningCilinder.Text = $"De inhoud van de cilinder is {inhoudCilinder}.";
