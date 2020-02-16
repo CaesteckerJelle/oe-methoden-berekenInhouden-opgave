@@ -5,32 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BerekenInhouden.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="454.03" Width="407.622" >
+        Title="MainWindow" Height="454.03" Width="407.622" Loaded="Window_Loaded" >
     <Grid>
         <WrapPanel HorizontalAlignment="Left" Height="30" Margin="10,46,0,0" VerticalAlignment="Top" Width="168" Background="#FFFDD4D4">
-            <Button Content="Balk" Width="75" Margin="5,5,0,0"/>
-            <Button Content="Cilinder" Width="75" Margin="10,5,0,0"/>
+            <Button x:Name="btnBalk" Content="Balk" Width="75" Margin="5,5,0,0" Click="btnBalk_Click"/>
+            <Button x:Name="btnCilinder" Content="Cilinder" Width="75" Margin="10,5,0,0" Click="btnCilinder_Click"/>
         </WrapPanel>
-        <Label Content="Meetkundige inhoud" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
-        <Grid HorizontalAlignment="Left" Height="282" Margin="10,133,0,0" VerticalAlignment="Top" Width="182" Background="#FFC2F9EF">
+        <Label x:Name="lblTitel" Content="Meetkundige inhoud" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <Grid x:Name="grdBalk" HorizontalAlignment="Left" Height="282" Margin="10,133,0,0" VerticalAlignment="Top" Width="182" Background="#FFC2F9EF">
             <Label Content="Grondvlak" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="93"/>
             <Label Content="Lengte" HorizontalAlignment="Left" Margin="25,41,0,0" VerticalAlignment="Top" Width="93"/>
             <Label Content="Breedte" HorizontalAlignment="Left" Margin="25,72,0,0" VerticalAlignment="Top" Width="93"/>
-            <TextBox  HorizontalAlignment="Left" Height="23" Margin="92,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="92,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
-            <Button  Content="Bereken" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="75"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,159,0,0" TextWrapping="Wrap" Text="Berekening" VerticalAlignment="Top" Height="113" Width="162" Background="#FFF9F1D4"/>
+            <TextBox x:Name="txtLengte"  HorizontalAlignment="Left" Height="23" Margin="92,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+            <TextBox x:Name="txtBreedte" HorizontalAlignment="Left" Height="23" Margin="92,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="btnBerekenBalk"  Content="Bereken" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="75" Click="btnBerekenBalk_Click"/>
+            <TextBlock x:Name="tbkBerekeningBalk" HorizontalAlignment="Left" Margin="10,159,0,0" TextWrapping="Wrap" Text="Berekening" VerticalAlignment="Top" Height="113" Width="162" Background="#FFF9F1D4"/>
         </Grid>
-        <Grid  HorizontalAlignment="Left" Height="282" Margin="219,133,-1,0" VerticalAlignment="Top" Width="182" Background="#FFC2F9EF">
+        <Grid x:Name="grdCilinder"  HorizontalAlignment="Left" Height="282" Margin="219,133,-1,0" VerticalAlignment="Top" Width="182" Background="#FFC2F9EF">
             <Label Content="Grondvlak" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="93"/>
             <Label Content="Diameter" HorizontalAlignment="Left" Margin="25,41,0,0" VerticalAlignment="Top" Width="62"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="92,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
-            <Button Content="Bereken" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="75"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,164,0,0" TextWrapping="Wrap" Text="Berekening" VerticalAlignment="Top" Height="108" Width="162" Background="#FFF9F1D4"/>
+            <TextBox x:Name="txtDiameter" HorizontalAlignment="Left" Height="23" Margin="92,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="btnBerekenCilinder" Content="Bereken" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="75" Click="btnBerekenCilinder_Click"/>
+            <TextBlock x:Name="tbkBerekeningCilinder" HorizontalAlignment="Left" Margin="10,164,0,0" TextWrapping="Wrap" Text="Berekening" VerticalAlignment="Top" Height="108" Width="162" Background="#FFF9F1D4"/>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="46" Margin="10,81,0,0" VerticalAlignment="Top" Width="168" Background="#FFFDD4D4">
+        <Grid x:Name="grdHoogte" HorizontalAlignment="Left" Height="46" Margin="10,81,0,0" VerticalAlignment="Top" Width="168" Background="#FFFDD4D4">
             <Label Content="Hoogte" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="64"/>
-            <TextBox HorizontalAlignment="Left" Height="23" Margin="74,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
+            <TextBox x:Name="txtHoogte" HorizontalAlignment="Left" Height="23" Margin="74,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
         </Grid>
 
     </Grid>
